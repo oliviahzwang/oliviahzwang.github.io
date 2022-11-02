@@ -32,10 +32,32 @@ ny_noaa_data = ny_noaa %>%
 {data-width=650}
 -----------------------------------------------------------------------
 
-### Average Maximum & Minimum Temperatures (C) in January
+### Total Monthly Precipitation in NYC in 2006 - Barplot
 
 ```{r}
-
+ny_noaa_data %>% 
+  select(id, year, month, prcp) %>% 
+  group_by(month) %>% 
+  drop_na(prcp) %>% 
+  filter(year == 2006) %>% 
+  mutate(month = recode(month, 
+                        '1' = 'January', 
+                        '2' = 'February',
+                        '3' = 'March', 
+                        '4' = 'April', 
+                        '5' = 'May', 
+                        '6' = 'June',
+                        '7' = 'July',
+                        '8' = 'August',
+                        '9' = 'September',
+                        '10' = 'October',
+                        '11' = 'November',
+                        '12' = 'December')) %>%
+  plot_ly(
+    x = ~month, y = ~prcp, color = ~month, type = "bar") %>% 
+  layout(
+    xaxis = list(title = "<b> Month </b>", ), 
+    legend = list(title = list(text = "<b> Month </b>")))
 ```
 
 {data-width=350}
@@ -47,7 +69,7 @@ ny_noaa_data = ny_noaa %>%
 
 ```
 
-### Average Maximum & Minimum Temperatures (C) in January
+### Average Maximum & Minimum Temperatures (C) in January - Scatterplot
 
 ```{r}
 ny_noaa_data %>%
