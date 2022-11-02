@@ -1,0 +1,78 @@
+---
+title: "Plotly - New York NOAA Data"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    source: embed
+    theme: spacelab
+---
+
+```{r setup, include = FALSE}
+library(flexdashboard)
+library(plotly)
+library(tidyverse)
+library(dplyr)
+library(p8105.datasets)
+```
+
+```{r}
+ny_noaa_data = ny_noaa %>%
+  janitor::clean_names() %>% 
+  separate(col = date, into = c('year', 'month','day'), sep = '-') %>%
+  mutate(
+    year = as.numeric(year),
+    month = as.numeric(month),
+    day = as.numeric(day),
+    prcp = prcp/10, 
+    tmax = as.numeric(tmax) / 10,
+    tmin = as.numeric(tmin) / 10)
+```
+
+{data-width=650}
+-----------------------------------------------------------------------
+
+### Average Maximum & Minimum Temperatures (C) in January
+
+```{r}
+
+```
+
+{data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+
+```
+
+### Average Maximum & Minimum Temperatures (C) in January
+
+```{r}
+ny_noaa_data %>%
+  select(id, year, month, tmax, tmin) %>% 
+  group_by(year) %>% 
+  drop_na(tmax, tmin) %>% 
+  filter(month == 1) %>% 
+  mutate(month = recode(month, 
+                        '1' = 'January'),
+         mean_tmax = mean(tmax), 
+         mean_tmin = mean(tmin)) %>% 
+  select(-tmin, -tmax) %>% 
+  pivot_longer(
+    mean_tmax:mean_tmin, 
+    names_to = "temp_observation", 
+    values_to = "temp_measurement") %>% 
+  mutate(temp_observation = recode(temp_observation, 
+                                   'mean_tmax' = "Average Max Temperature",
+                                   'mean_tmin' = "Average Min Temperature")) %>% 
+  plot_ly(
+    x = ~year, y = ~temp_measurement, color = ~temp_observation, 
+    type = 'scatter', mode = 'markers') %>% 
+  layout(
+    xaxis = list(title = "<b> Year </b>"),
+    yaxis = list(title = "<b> Temperature (C) </b>"), 
+    legend = list(title = list(text = "<b> Temperature Observation </b>")))
+```
+

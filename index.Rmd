@@ -13,9 +13,10 @@ Welcome to my website! This website was created for P8105 Data Science I Homewor
 
 This webpage is a brief introductory landing page. On the top right corner in the navigation bar, you will find: 
 
-* [About Me](about.html) page with my academic and professional experience; 
+* An [About Me](about.html) page with my academic and professional experience; 
 * My Email address;  
 * My [GitHub](https://github.com/oliviahzwang/) link;
-* My [LinkedIn](https://www.linkedin.com/in/oliviahzwang/) page; 
+* My [LinkedIn](https://www.linkedin.com/in/oliviahzwang/) page; and
+* A [Plotly](dashboard.html) page containing 3 interactive plots
 
 

@@ -11,6 +11,8 @@ navbar:
       href: http://github.com/oliviahzwang/
     - icon: fa-linkedin fa-lg
       href: https://www.linkedin.com/in/oliviahzwang/
+    - text: "Plotly"
+      href: dashboard.html
 output:
   html_document:
     theme: cerulean
