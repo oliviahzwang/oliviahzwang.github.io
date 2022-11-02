@@ -4,7 +4,63 @@ output:
   html_document:
     toc: true
     toc_float: true
-    theme: cerulean
+    theme: spacelab
 ---
 
-This website contains information about me. 
+# Education
+#### __Columbia University, Mailman School of Public Health, New York, NY__
+#### _Candidate for M.P.H. in Epidemiology, Comparative Effectiveness Outcomes Research Certificate | Sept 2021 — May 2023_
+* _Relevant Coursework_: Epidemiologic Research Methods, Decision Analysis, Health Economics, Determinants of Health, Design & Conduct of Observational Epidemiology, Analysis of Large-Scale Data, Consulting
+
+#### __Toronto Metropolitan University, School of Occupational & Public Health, Toronto, Canada__
+#### _B.A.Sc. in Public Health & Safety Co-operative Education (5-year program) | Sept 2016 — May 2021_ 
+* __First in Class__ | Dean's Honor List 2016-2021
+* James Powell Award Recipient: Highest cumulative GPA by a graduating student in Public Health & Safety
+* Award of Merit Recipient: Highest grade point average by a third year Public Health & Safety Student
+
+#### __Toronto Metropolitan University, The G. Raymond Chang School of Continuing Education, Toronto, Canada__
+#### _Certificate in Occupational Health & Safety | Nov 2018 — May 2021_
+
+___
+# Professional Experience
+#### __New York City Department of Health & Mental Hygiene | Bureau of Communicable Disease, New York, NY__
+#### _Foodborne Disease Investigation Intern | June 2022 — Present_
+* Conducted thorough interviews with salmonellosis and campylobacteriosis patients using hypothesis-generating questionnaires in both English and Mandarin Chinese
+* Facilitated monkeypox outbreak response through conducting patient interviews and reporting contact tracing information
+* Managed daily salmonella case load by verifying lab results, entering data into workflow database, and assigning cases to teammates
+* Liaised with healthcare providers, microbiology labs, and hospital Infection Control & Prevention departments to follow up regarding patient lab results
+* Investigated clusters of salmonellosis and campylobacteriosis through completing patient interviews, entering data into cluster database, and creating a comprehensive summary report
+
+#### __Regional Municipality of Peel | Public Works Department, Operations Support Division, Brampton, Canada__
+#### _Occupational Health & Safety Co-op Student | Jan 2020 — Apr 2020_
+* Built progress tracking dashboard for division-wide completion of Job Hazard Analyses
+* Conducted in-depth review of external vendor’s presentation and manual for Job Hazard Analysis training
+* Updated and analyzed divisional accident & injury statistics using corporate health & safety reports
+* Authored the MSDSonline 2020 User Guide following major system updates
+* Revised incident management documentation by creating guidance flowcharts and fishbone diagrams
+
+#### __Regional Municipality of Peel | Public Works Department, Waste Management Division, Brampton, Canada__
+#### _Occupational Health & Safety Co-op Student | Sept 2018 — Dec 2018, May 2019 — Aug 2019_
+* Inventoried baseline information to support the project, including standard operating procedures, task lists, user manuals and training records by liaising with internal staff from varying levels within the organization
+* Formulated exhaustive list of position-specific tasks of potential health & safety concern using detailed task lists
+* Completed risk assessments on position-specific tasks from a health & safety perspective
+* Constructed divisional task and training record matrices in preparation for Job Hazard Analyses
+* Analyzed divisional accident & injury data using extensive corporate health & safety team reports, and developed a series of comprehensive graphs that reflect and explain major trends
+
+#### __Southwestern Public Health | Environmental Health, Public Health Inspections, Woodstock, Canada__
+#### _Student Public Health Inspector | May 2018 — Aug 2018_
+* Shadowed public health inspections of various food premises, public pools and personal service settings
+* Responded to housing complaints, conducted rabies investigations, and processed septic system applications alongside a public health inspector
+* Assisted with Lyme disease surveillance by processing walk-in tick submissions, completing preliminary species identification, submitting specimens to the National Microbiology Lab, and conducting follow-up 
+* Engaged in West Nile Virus surveillance via mosquito trap setting, retrieval and submission of mosquito samples, and responding to public inquiries submitted to the West Nile Virus telephone hotline
+* Participated in water quality surveillance by conducting routine beach water sampling, submitting water samples for testing, completing data entry, and discussing results with inspectors and beach owners
+
+___
+# Technical Skills & Languages
+#### __Technical Skills__
+_Data Analysis_: R, SAS, Stata, SQL (Spring 2023), JMP 14
+
+_Computer Software_: Microsoft Office, Access, Visio, Hedgehog, Enterprise Information Management Software, Maven, REDCap
+
+#### __Languages__
+English (_Native), Mandarin Chinese (_Native_), French (_Proficient_)

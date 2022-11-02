@@ -1,16 +1,21 @@
 ---
-title: "My awesome website"
+title: "Olivia's Website for Homework 4"
 output: 
   html_document:
     toc: true
     toc_float: true
-    theme: cerulean
+    theme: spacelab
 ---
 
-# This is Jeff's awesome website
+# Introduction 
 
-![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
+Welcome to my website! This website was created for P8105 Data Science I Homework 4. 
 
-## Link to page within the site
+This webpage is a brief introductory landing page. On the top right corner in the navigation bar, you will find: 
 
-[About Me](about.html)
+* [About Me](about.html) page with my academic and professional experience; 
+* My Email address;  
+* My [GitHub](https://github.com/oliviahzwang/) link;
+* My [LinkedIn](https://www.linkedin.com/in/oliviahzwang/) page; 
+
+

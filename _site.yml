@@ -1,14 +1,16 @@
-name: "Yay internet!"
+name: "P8105 Homework 4 Webpage"
 output_dir: "."
 navbar:
   title: "Home"
   right:
-    - text: "About"
+    - text: "About Me"
       href: about.html
     - icon: fa-envelope fa-lg
       href: mailto:olivia.wang@columbia.edu
     - icon: fa-github fa-lg
       href: http://github.com/oliviahzwang/
+    - icon: fa-linkedin fa-lg
+      href: https://www.linkedin.com/in/oliviahzwang/
 output:
   html_document:
     theme: cerulean
