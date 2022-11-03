@@ -32,7 +32,7 @@ ny_noaa_data = ny_noaa %>%
 {data-width=650}
 -----------------------------------------------------------------------
 
-### Total Monthly Precipitation in NYC in 2006 - Barplot
+### __Total Monthly Precipitation in NYC in 2006 - Barplot__
 
 ```{r}
 ny_noaa_data %>% 
@@ -56,7 +56,10 @@ ny_noaa_data %>%
   plot_ly(
     x = ~month, y = ~prcp, color = ~month, type = "bar") %>% 
   layout(
-    xaxis = list(title = "<b> Month </b>", ), 
+    xaxis = list(title = "<b> Month </b>",
+                 categoryorder = "array", 
+                 categoryarray = ~month), 
+    yaxis = list(title = "<b> Precipitation (mm) </b>"),
     legend = list(title = list(text = "<b> Month </b>")))
 ```
 
@@ -69,7 +72,7 @@ ny_noaa_data %>%
 
 ```
 
-### Average Maximum & Minimum Temperatures (C) in January - Scatterplot
+### __Average Maximum & Minimum Temperatures (C) in January - Scatterplot__
 
 ```{r}
 ny_noaa_data %>%
