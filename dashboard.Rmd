@@ -29,10 +29,45 @@ ny_noaa_data = ny_noaa %>%
     tmin = as.numeric(tmin) / 10)
 ```
 
-{data-width=650}
+{data-width=500}
 -----------------------------------------------------------------------
 
-### __Total Monthly Precipitation in NYC in 2006 - Barplot__
+### __Monthly Snow Depth in NYC in 2006 - Boxplot__
+
+```{r}
+ny_noaa_data %>% 
+  select(id, year, month, snwd) %>% 
+  group_by(month) %>% 
+  drop_na(snwd) %>% 
+  filter(year == 2006, snwd > 0) %>% 
+  mutate(month = recode(month, 
+                        '1' = 'January', 
+                        '2' = 'February',
+                        '3' = 'March', 
+                        '4' = 'April', 
+                        '5' = 'May', 
+                        '6' = 'June',
+                        '7' = 'July',
+                        '8' = 'August',
+                        '9' = 'September',
+                        '10' = 'October',
+                        '11' = 'November',
+                        '12' = 'December')) %>% 
+  plot_ly(
+  x = ~snwd, y = ~month, color = ~month, type = "box") %>% 
+  layout(
+    xaxis = list(title = "<b> Snow Depth (mm) </b>"),
+    yaxis = list(title = "<b> Month </b>",
+                 categoryorder = "array ascending", 
+                 categoryarray = c("December", "November","October", "September", "August", "July", "June", "May", "April", "March", "February", "January")), 
+    showlegend = FALSE) 
+```
+
+
+{data-width=500}
+-----------------------------------------------------------------------
+
+### __Total Monthly Precipitation in NYC in 2006 - Barchart__
 
 ```{r}
 ny_noaa_data %>% 
@@ -52,24 +87,15 @@ ny_noaa_data %>%
                         '9' = 'September',
                         '10' = 'October',
                         '11' = 'November',
-                        '12' = 'December')) %>%
+                        '12' = 'December')) %>% 
   plot_ly(
     x = ~month, y = ~prcp, color = ~month, type = "bar") %>% 
-  layout(
+  layout( 
     xaxis = list(title = "<b> Month </b>",
                  categoryorder = "array", 
                  categoryarray = ~month), 
     yaxis = list(title = "<b> Precipitation (mm) </b>"),
-    legend = list(title = list(text = "<b> Month </b>")))
-```
-
-{data-width=350}
------------------------------------------------------------------------
-
-### Chart B
-
-```{r}
-
+    showlegend = FALSE)
 ```
 
 ### __Average Maximum & Minimum Temperatures (C) in January - Scatterplot__
